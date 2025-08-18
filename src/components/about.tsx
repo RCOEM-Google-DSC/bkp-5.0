@@ -35,12 +35,12 @@ const About: React.FC<AboutProps> = ({ className = "" }) => {
                 pandals directly to your doorstep, ensuring everyone can partake
                 in the festivities, no matter where they are.
               </p>
-              <ul className="list-disc list-inside text-gray-700 mb-6">
+              <ul className="list-disc list-inside text-gray-600 text-lg mb-6">
                 <li>Freshly prepared prasad from trusted pandals</li>
                 <li>Safe and hygienic packaging</li>
                 <li>Home delivery across select locations</li>
               </ul>
-              <p className="text-md text-gray-600">
+              <p className="text-md text-orange-500 text-balance">
                 Join us in celebrating Ganpati Bappa blessings and spread
                 happiness with every prasad delivered!
               </p>

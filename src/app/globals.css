@@ -1,2 +1,4 @@
 @import "tailwindcss";
-
+@theme inline {
+  --font-sans: var(--font-product-sans);
+}

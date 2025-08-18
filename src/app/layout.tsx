@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${productSans.variable} antialiased bg-gradient-to-br from-orange-50 to-pink-50`}
+        className={` ${productSans.variable} antialiased  bg-gradient-to-br from-orange-50 to-pink-50 font-sans`}
       >
         {children}
       </body>

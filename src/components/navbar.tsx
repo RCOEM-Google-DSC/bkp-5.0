@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 interface NavItem {
   label: string;
@@ -11,10 +11,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Prizes', href: '/prizes' },
-  { label: 'Leaderboard', href: '/leaderboard' },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Prizes", href: "/prizes" },
+  { label: "Leaderboard", href: "/leaderboard" },
 ];
 
 const Navbar: React.FC = () => {
@@ -29,13 +29,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <Image
               src="/images/gdg.svg"
               alt="Logo"
-              width={150}
-              height={150}
-              className=" mt-4 "
+              width={180}
+              height={180}
+              className=" mt-3.5 "
             />
           </div>
 
@@ -45,14 +45,18 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-black hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-md transition-colors duration-200 relative hover:underline"
+                style={{
+                  textUnderlineOffset: "4px",
+                  textDecorationColor: "#FD6500",
+                }}
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/participate"
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Participate
             </Link>
@@ -82,7 +86,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-md transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -90,7 +94,7 @@ const Navbar: React.FC = () => {
               ))}
               <Link
                 href="/participate"
-                className="bg-red-600 hover:bg-red-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-4"
+                className="bg-red-600 hover:bg-red-700 text-white block px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200 mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Participate
