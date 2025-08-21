@@ -227,7 +227,7 @@ const CodeChefHistory: React.FC<CodeChefHistoryProps> = ({
         {/* Mission Statement */}
         <div className="mt-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <Users className="w-16 h-16 mx-auto mb-6 opacity-90" />
+            {/* <Users className="w-16 h-16 mx-auto mb-6 opacity-90" /> */}
             <p className="text-xl md:text-2xl leading-relaxed mb-6">
               <strong>CodeChef</strong> is the Indian Competitive Programming
               platform, and a key part of our coding journey.

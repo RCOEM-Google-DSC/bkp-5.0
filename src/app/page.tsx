@@ -1,5 +1,6 @@
 import AboutSection from "@/components/about";
 import CodeChefHistory from "@/components/codechefhistory";
+import { Footer } from "@/components/footer";
 import Hero from "@/components/hero";
 import Leaderboard from "@/components/leaderboard";
 import MissionSection from "@/components/mission";
@@ -14,8 +15,9 @@ export default function Home() {
       <AboutSection />
       <Partners />
       {/* <Leaderboard /> */}
-      <CodeChefHistory />
+      {/* <CodeChefHistory /> */}
       <MissionSection />
+      <Footer />
     </>
   );
 }
