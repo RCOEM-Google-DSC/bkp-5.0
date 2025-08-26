@@ -1,11 +1,11 @@
-import Header from "@/components/header"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Prizes from "@/components/prizes"
-import Partners from "@/components/partners"
-import Leaderboard from "@/components/leaderboard"
-import { Footer } from "@/components/footer"
-
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Prizes from "@/components/prizes";
+import Partners from "@/components/partners";
+import Leaderboard from "@/components/leaderboard";
+import { Footer } from "@/components/footer";
+import CommunityPartners from "@/components/communitypartners";
 
 export default function Home() {
   return (
@@ -15,8 +15,9 @@ export default function Home() {
       <About />
       <Prizes />
       <Partners />
+      <CommunityPartners />
       <Leaderboard />
       <Footer />
     </main>
-  )
+  );
 }

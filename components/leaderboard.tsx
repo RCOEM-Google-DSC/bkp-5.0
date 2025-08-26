@@ -76,8 +76,8 @@ export default function Leaderboard() {
           className="px-6 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-8 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-300 text-lg sm:text-xl lg:text-2xl font-bold transform hover:scale-105 active:scale-95"
         >
           <span className="flex items-center gap-2">
-            Visit Website
-            <span className="text-xl sm:text-2xl">→</span>
+            Register Now
+            {/* <span className="text-xl sm:text-2xl">→</span> */}
           </span>
         </a>
       </div>
