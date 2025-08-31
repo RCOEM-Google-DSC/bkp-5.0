@@ -1,50 +1,50 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Prize", href: "#prize" },
-    { name: "Collaborators", href: "#collaborators" }
-  ]
+    { name: "Collaborators", href: "#collaborators" },
+  ];
 
   // Your Unstop link
   const unstopLink =
-    "https://unstop.com/o/kZSVs5q?lb=sDELTvhK&utm_medium=Share&utm_source=ashutpan9454&utm_campaign=Online_coding_challenge"
+    "https://unstop.com/o/kZSVs5q?lb=sDELTvhK&utm_medium=Share&utm_source=ashutpan9454&utm_campaign=Online_coding_challenge";
 
   // Close mobile menu when clicking outside or resizing
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isMenuOpen) {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
-    }
+    };
 
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element
-      if (isMenuOpen && !target.closest('header')) {
-        setIsMenuOpen(false)
+      const target = event.target as Element;
+      if (isMenuOpen && !target.closest("header")) {
+        setIsMenuOpen(false);
       }
-    }
+    };
 
-    window.addEventListener('resize', handleResize)
-    document.addEventListener('click', handleClickOutside)
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("click", handleClickOutside);
 
     return () => {
-      window.removeEventListener('resize', handleResize)
-      document.removeEventListener('click', handleClickOutside)
-    }
-  }, [isMenuOpen])
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
-      <header className="sticky top-0 z-50 py-3 md:py-6 bg-gradient-to-br from-orange-50 to-pink-50 ">
+      <header className="sticky top-10 z-50 py-3 md:py-6 bg-gradient-to-br from-orange-50 to-pink-50 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12 md:h-16">
             {/* Logo */}
@@ -88,16 +88,18 @@ export default function Header() {
               aria-expanded={isMenuOpen}
             >
               <div className="relative w-6 h-6">
-                <Menu 
-                  size={24} 
+                <Menu
+                  size={24}
                   className={`absolute inset-0 transform transition-all duration-300 ${
-                    isMenuOpen ? 'rotate-180 opacity-0' : 'rotate-0 opacity-100'
+                    isMenuOpen ? "rotate-180 opacity-0" : "rotate-0 opacity-100"
                   }`}
                 />
-                <X 
-                  size={24} 
+                <X
+                  size={24}
                   className={`absolute inset-0 transform transition-all duration-300 ${
-                    isMenuOpen ? 'rotate-0 opacity-100' : '-rotate-180 opacity-0'
+                    isMenuOpen
+                      ? "rotate-0 opacity-100"
+                      : "-rotate-180 opacity-0"
                   }`}
                 />
               </div>
@@ -105,11 +107,9 @@ export default function Header() {
           </div>
 
           {/* Mobile Navigation */}
-          <div 
+          <div
             className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-              isMenuOpen 
-                ? 'max-h-96 opacity-100' 
-                : 'max-h-0 opacity-0'
+              isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="py-4 border-t border-gray-200/50 mt-4">
@@ -121,7 +121,7 @@ export default function Header() {
                     className="text-gray-600 hover:text-gray-900 text-base font-medium py-2 px-2 rounded-lg hover:bg-white/50 transition-all duration-200 transform hover:translate-x-2"
                     onClick={() => setIsMenuOpen(false)}
                     style={{
-                      animationDelay: `${index * 50}ms`
+                      animationDelay: `${index * 50}ms`,
                     }}
                   >
                     {item.name}
@@ -144,11 +144,11 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {isMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
     </>
-  )
+  );
 }
