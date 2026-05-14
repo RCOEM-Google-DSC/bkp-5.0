@@ -44,17 +44,17 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-10 z-50 py-3 md:py-6 bg-gradient-to-br from-orange-50 to-pink-50 ">
+      <header className="sticky top-0 z-50 py-3 md:py-6 bg-gradient-to-br from-orange-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12 md:h-16">
             {/* Logo */}
             <div className="flex items-center space-x-2 flex-shrink-0">
               <Image
-                src="/gdg.png"
+                src="/gdgico.svg"
                 alt="Google Developer Student Clubs"
-                width={120}
-                height={120}
-                className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+                width={80}
+                height={80}
+                className="w-10 h-10 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-25 lg:h-25 object-contain"
                 priority
               />
             </div>
@@ -70,14 +70,14 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              <a
-                href={unstopLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-600 text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-lg text-sm lg:text-base font-medium hover:bg-red-700 hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-              >
-                Participate
-              </a>
+              {/* <a */}
+              {/*   href={unstopLink} */}
+              {/*   target="_blank" */}
+              {/*   rel="noopener noreferrer" */}
+              {/*   className="bg-red-600 text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-lg text-sm lg:text-base font-medium hover:bg-red-700 hover:shadow-lg transform hover:scale-105 transition-all duration-200" */}
+              {/* > */}
+              {/*   Participate */}
+              {/* </a> */}
             </nav>
 
             {/* Mobile menu button */}
@@ -90,17 +90,15 @@ export default function Header() {
               <div className="relative w-6 h-6">
                 <Menu
                   size={24}
-                  className={`absolute inset-0 transform transition-all duration-300 ${
-                    isMenuOpen ? "rotate-180 opacity-0" : "rotate-0 opacity-100"
-                  }`}
+                  className={`absolute inset-0 transform transition-all duration-300 ${isMenuOpen ? "rotate-180 opacity-0" : "rotate-0 opacity-100"
+                    }`}
                 />
                 <X
                   size={24}
-                  className={`absolute inset-0 transform transition-all duration-300 ${
-                    isMenuOpen
+                  className={`absolute inset-0 transform transition-all duration-300 ${isMenuOpen
                       ? "rotate-0 opacity-100"
                       : "-rotate-180 opacity-0"
-                  }`}
+                    }`}
                 />
               </div>
             </button>
@@ -108,9 +106,8 @@ export default function Header() {
 
           {/* Mobile Navigation */}
           <div
-            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-              isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            }`}
+            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              }`}
           >
             <div className="py-4 border-t border-gray-200/50 mt-4">
               <nav className="flex flex-col space-y-3">

@@ -68,19 +68,19 @@ export default function Leaderboard() {
         />
       </div>
 
-      <div className="flex justify-center mt-6 sm:mt-8 px-4">
-        <a
-          href="https://unstop.com/o/kZSVs5q?lb=sDELTvhK&utm_medium=Share&utm_source=ashutpan9454&utm_campaign=Online_coding_challenge"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-8 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-300 text-lg sm:text-xl lg:text-2xl font-bold transform hover:scale-105 active:scale-95"
-        >
-          <span className="flex items-center gap-2">
-            Register Now
-            {/* <span className="text-xl sm:text-2xl">→</span> */}
-          </span>
-        </a>
-      </div>
+      {/* <div className="flex justify-center mt-6 sm:mt-8 px-4"> */}
+      {/*   <a */}
+      {/*     href="https://unstop.com/o/kZSVs5q?lb=sDELTvhK&utm_medium=Share&utm_source=ashutpan9454&utm_campaign=Online_coding_challenge" */}
+      {/*     target="_blank" */}
+      {/*     rel="noopener noreferrer" */}
+      {/*     className="px-6 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-8 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-300 text-lg sm:text-xl lg:text-2xl font-bold transform hover:scale-105 active:scale-95" */}
+      {/*   > */}
+      {/*     <span className="flex items-center gap-2"> */}
+      {/*       Register Now */}
+      {/*       <span className="text-xl sm:text-2xl">→</span> */}
+      {/*     </span> */}
+      {/*   </a> */}
+      {/* </div> */}
     </section>
   );
 }

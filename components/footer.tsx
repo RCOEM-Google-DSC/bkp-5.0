@@ -48,7 +48,9 @@ export function Footer() {
           <div className="flex flex-col items-center md:flex-row md:items-start w-full text-center md:text-left">
             <IoLocationOutline className="mt-1 mb-2 md:mb-0 mr-0 md:mx-12 md:mr-6 text-lg md:text-xl text-black flex-shrink-0" />
             <div className="text-sm md:text-md text-black leading-relaxed">
-              Shri Ramdeobaba College of Engineering and Management, Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur - 440013
+              Shri Ramdeobaba College of Engineering and Management, 
+              <br/>
+              Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur - 440013
             </div>
           </div>
           
